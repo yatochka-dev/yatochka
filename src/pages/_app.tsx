@@ -23,8 +23,12 @@ export default function App({ Component, pageProps }: AppProps) {
                 <title>Portfolio</title>
             </Head>
             <div
-                className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen overflow-x-hidden`}
+                className={`${montserrat.variable} min-h-screen w-full overflow-x-hidden bg-light font-mont dark:bg-dark `}
             >
+                <button className="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3">
+                    ...
+                </button>
+
                 <NavBar />
                 <AnimatePresence mode={'wait'}>
                     <Component key={router.asPath} {...pageProps} />

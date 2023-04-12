@@ -28,7 +28,7 @@ const Skill: React.FC<
     return (
         <>
             <motion.div
-                className={`flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark cursor-pointer absolute dark:text-dark bg-light lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 xs:bg-transparent xs:dark:bg-transparent xs:text-text-dark xs:dark:text-light xs:font-bold`}
+                className={`xs:text-text-dark absolute flex cursor-pointer items-center justify-center rounded-full bg-dark bg-light px-6 py-3 font-semibold text-light shadow-dark dark:text-dark lg:px-4 lg:py-2 md:px-3 md:py-1.5 md:text-sm xs:bg-transparent xs:font-bold xs:dark:bg-transparent xs:dark:text-light`}
                 whileHover={{ scale: 1.05 }}
                 initial={{
                     x: 0,
@@ -79,14 +79,14 @@ const Skills: React.FC<SkillsProps> = () => {
         <>
             <h2
                 className={
-                    'font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32'
+                    'mt-64 w-full text-center text-8xl font-bold md:mt-32 md:text-6xl'
                 }
             >
                 Skills
             </h2>
             <div
                 className={
-                    'w-full h-screen lg:h-[80svh] sm:h-[60svh] xs:h[50svh] relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark ' +
+                    'xs:h[50svh] relative flex h-screen w-full items-center justify-center rounded-full bg-circularLight dark:bg-circularDark lg:h-[80svh] sm:h-[60svh] ' +
                     'lg:bg-circularLightLg lg:dark:bg-circularDarkLg' +
                     'md:bg-circularLightMd md:dark:bg-circularDarkMd' +
                     'sm:bg-circularLightSm sm:dark:bg-circularDarkSm'
@@ -94,7 +94,7 @@ const Skills: React.FC<SkillsProps> = () => {
             >
                 <motion.div
                     className={
-                        'flex items-center justify-center rounded-full font-semibold bg-dark text-light p-8 shadow-dark cursor-pointer dark:text-dark bg-light lg:p-6 md:p-4 xs:text-xs xs:p-2'
+                        'flex cursor-pointer items-center justify-center rounded-full bg-dark bg-light p-8 font-semibold text-light shadow-dark dark:text-dark lg:p-6 md:p-4 xs:p-2 xs:text-xs'
                     }
                     whileHover={{ scale: 1.05 }}
                 >

@@ -15,7 +15,7 @@ const LiIcon: React.FC<{
                 height={'75'}
                 viewBox={'0 0 100 100'}
                 className={
-                    '-rotate-90 md:w-[60px] md:h-[60px] xs:w-[45px] xs:h-[45px]'
+                    '-rotate-90 md:h-[60px] md:w-[60px] xs:h-[45px] xs:w-[45px]'
                 }
             >
                 <circle
@@ -23,14 +23,14 @@ const LiIcon: React.FC<{
                     cy={'50'}
                     r={'20'}
                     className={
-                        'stroke-primary stroke-1 dark:stroke-primaryDark fill-none'
+                        'fill-none stroke-primary stroke-1 dark:stroke-primaryDark'
                     }
                 />
                 <motion.circle
                     cx={'75'}
                     cy={'50'}
                     r={'20'}
-                    className={'stroke-[5px] fill-light dark:fill-dark'}
+                    className={'fill-light stroke-[5px] dark:fill-dark'}
                     style={{
                         pathLength: scrollYProgress,
                     }}
@@ -40,7 +40,7 @@ const LiIcon: React.FC<{
                     cy={'50'}
                     r={'10'}
                     className={
-                        'stroke-1 fill-primary dark:fill-primaryDark animate-pulse'
+                        'animate-pulse fill-primary stroke-1 dark:fill-primaryDark'
                     }
                 />
             </svg>

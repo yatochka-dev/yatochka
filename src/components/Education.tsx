@@ -35,7 +35,7 @@ const Details: React.FC<DetailProps> = (props) => {
     return (
         <li
             className={
-                'my-8 first:mt-0 last:mb-0 w-[60%] md:w-[80%] mx-auto flex flex-col items-center justify-between'
+                'mx-auto my-8 flex w-[60%] flex-col items-center justify-between first:mt-0 last:mb-0 md:w-[80%]'
             }
             ref={liRef}
         >
@@ -54,19 +54,19 @@ const Details: React.FC<DetailProps> = (props) => {
             >
                 <h3
                     className={
-                        'capitalize font-bold text-2xl sm:text-xl xs:text-lg'
+                        'text-2xl font-bold capitalize sm:text-xl xs:text-lg'
                     }
                 >
                     {props.type}&nbsp;
                 </h3>
                 <span
                     className={
-                        'capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm'
+                        'font-medium capitalize text-dark/75 dark:text-light/75 xs:text-sm'
                     }
                 >
                     {props.time} | {props.place}
                 </span>
-                <p className={'font-medium w-full md:text-sm'}>{props.info}</p>
+                <p className={'w-full font-medium md:text-sm'}>{props.info}</p>
             </motion.div>
         </li>
     )
@@ -83,19 +83,19 @@ const Education: React.FC = ({}) => {
         <div className={'my-64'}>
             <h2
                 className={
-                    'font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16'
+                    'mb-32 w-full text-center text-8xl font-bold md:mb-16 md:text-6xl xs:text-4xl'
                 }
             >
                 Education
             </h2>
 
             <div
-                className={'w-[75%] mx-auto relative lg:w-[90%] md:w-full'}
+                className={'relative mx-auto w-[75%] lg:w-[90%] md:w-full'}
                 ref={secondaryContainer}
             >
                 <motion.div
                     className={
-                        'absolute left-[2.20rem] top-0 w-1 h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]'
+                        'absolute left-[2.20rem] top-0 h-full w-1 origin-top bg-dark dark:bg-light md:left-[30px] md:w-[2px] xs:left-[20px]'
                     }
                     style={{
                         scaleY: scrollYProgress,
@@ -104,7 +104,7 @@ const Education: React.FC = ({}) => {
 
                 <ul
                     className={
-                        'w-full flex flex-col items-start justify-between ml-4 xs:ml-2'
+                        'ml-4 flex w-full flex-col items-start justify-between xs:ml-2'
                     }
                 >
                     {schools.map((job, index) => (

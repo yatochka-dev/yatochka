@@ -6,7 +6,7 @@ const Logo: React.FC = () => {
     const linkClasses =
         'w-16 h-16 bg-dark flex items-center justify-center rounded-full text-2xl font-bold text-white border border-solid border-transparent dark:border-light'
     return (
-        <div className={'flex items-center justify-center mt-2'}>
+        <div className={'mt-2 flex items-center justify-center'}>
             <Link href={'/'} legacyBehavior passHref>
                 <motion.a
                     className={linkClasses}

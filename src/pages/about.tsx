@@ -77,7 +77,7 @@ const About = () => {
                     <AnimatedText
                         text={'Passion Fuels Purpose!'}
                         className={
-                            'mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8'
+                            'mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl'
                         }
                     />
                     <div className={'grid w-full grid-cols-8 gap-16 sm:gap-8'}>
@@ -119,18 +119,18 @@ const About = () => {
                         </div>
                         <div
                             className={
-                                'col-span-3 xl:col-span-4 md:order-1 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light md:col-span-8 '
+                                'relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:border-light dark:bg-dark xl:col-span-4 md:order-1 md:col-span-8 '
                             }
                         >
                             <div
                                 className={
-                                    'absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light'
+                                    'absolute -right-3 top-0 -z-10 h-[103%] w-[102%] rounded-[2rem] bg-dark dark:bg-light'
                                 }
                             />
                             <Image
                                 src={ProfilePic}
                                 alt={'Yatochka'}
-                                className={'w-full h-auto rounded-2xl'}
+                                className={'h-auto w-full rounded-2xl'}
                                 priority={true}
                                 sizes={
                                     '(max-width: 768px) 100vw, ' +

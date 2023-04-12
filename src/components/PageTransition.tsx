@@ -12,7 +12,7 @@ const PageTransition = () => {
         <>
             <motion.div
                 className={
-                    'fixed top-0 bottom-0 right-full w-screen h-screen z-50 bg-primary'
+                    'fixed bottom-0 right-full top-0 z-50 h-screen w-screen bg-primary'
                 }
                 initial={{
                     x: '100%',
@@ -34,7 +34,7 @@ const PageTransition = () => {
             />
             <motion.div
                 className={
-                    'fixed top-0 bottom-0 right-full w-screen h-screen z-40 bg-light'
+                    'fixed bottom-0 right-full top-0 z-40 h-screen w-screen bg-light'
                 }
                 initial={{
                     x: '100%',
@@ -53,7 +53,7 @@ const PageTransition = () => {
             />
             <motion.div
                 className={
-                    'fixed top-0 bottom-0 right-full w-screen h-screen z-30 bg-dark'
+                    'fixed bottom-0 right-full top-0 z-30 h-screen w-screen bg-dark'
                 }
                 initial={{
                     x: '100%',

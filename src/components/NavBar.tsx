@@ -30,10 +30,10 @@ const CustomLink: React.FC<
     const isActive = router.pathname === href
 
     return (
-        <Link href={href} className={`${className} relative group`}>
+        <Link href={href} className={`${className} group relative`}>
             {title}
             <span
-                className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 dark:bg-light ${
+                className={`ease absolute -bottom-0.5 left-0 inline-block h-[1px] bg-dark transition-[width] duration-300 group-hover:w-full dark:bg-light ${
                     isActive ? 'w-full' : 'w-0'
                 }`}
             >
@@ -71,12 +71,12 @@ const CustomMobileLink: React.FC<
 
     return (
         <button
-            className={`${className} relative group text-light dark:text-dark`}
+            className={`${className} group relative text-light dark:text-dark`}
             onClick={handleClick}
         >
             {title}
             <span
-                className={`h-[1px] inline-block bg-light dark:bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
+                className={`ease absolute -bottom-0.5 left-0 inline-block h-[1px] bg-light transition-[width] duration-300 group-hover:w-full dark:bg-dark ${
                     isActive ? 'w-full' : 'w-0'
                 }`}
             >
@@ -134,7 +134,7 @@ const MobileNav: React.FC<{
         >
             <motion.div
                 className={
-                    'z-30 min-w-[70vw] md:min-w-[90vw] flex flex-col justify-between items-center fixed !top-1/2 !left-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32'
+                    'fixed !left-1/2 !top-1/2 z-30 flex min-w-[70vw] flex-col items-center justify-between rounded-lg bg-dark/90 py-32 backdrop-blur-md dark:bg-light/75 md:min-w-[90vw]'
                 }
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{
@@ -151,7 +151,7 @@ const MobileNav: React.FC<{
                 <button
                     onClick={handleClose}
                     className={
-                        'absolute top-4 right-4 fill-light dark:fill-dark'
+                        'absolute right-4 top-4 fill-light dark:fill-dark'
                     }
                 >
                     {/*  X  */}
@@ -176,7 +176,7 @@ const MobileNav: React.FC<{
                 </button>
                 <nav
                     className={
-                        'flex items-center justify-center flex-col gap-4'
+                        'flex flex-col items-center justify-center gap-4'
                     }
                 >
                     <CustomMobileLink href={'/'} close={handleClose}>
@@ -195,7 +195,7 @@ const MobileNav: React.FC<{
 
                 <div
                     className={
-                        'flex items-center justify-center flex-wrap mt-2 gap-6 sm:gap-4 md:mt-4'
+                        'mt-2 flex flex-wrap items-center justify-center gap-6 md:mt-4 sm:gap-4'
                     }
                 >
                     <SocialIcon href={'https://twitter.com/'}>
@@ -203,7 +203,7 @@ const MobileNav: React.FC<{
                     </SocialIcon>
                     <SocialIcon href={'https://github.com/'}>
                         <GithubIcon
-                            className={`!w-6 bg-light rounded-full dark:bg-dark`}
+                            className={`!w-6 rounded-full bg-light dark:bg-dark`}
                         />
                     </SocialIcon>
                     <SocialIcon href={'/'}>
@@ -211,7 +211,7 @@ const MobileNav: React.FC<{
                     </SocialIcon>
                     <SocialIcon href={'/'}>
                         <PinterestIcon
-                            className={`!w-6 bg-light rounded-full`}
+                            className={`!w-6 rounded-full bg-light`}
                         />
                     </SocialIcon>
                     <SocialIcon href={'/'}>
@@ -271,25 +271,25 @@ const NavBar: React.FC = ({}) => {
     return (
         <header
             className={
-                'relative w-full px-32 py-8 font-medium grid grid-rows-1 grid-cols-3 items-center dark:text-light z-10 lg:px-16 md:px-12 sm:px-8'
+                'relative z-10 grid w-full grid-cols-3 grid-rows-1 items-center px-32 py-8 font-medium dark:text-light lg:px-16 md:px-12 sm:px-8'
             }
         >
             <button
-                className={'flex-col justify-center items-start hidden lg:flex'}
+                className={'hidden flex-col items-start justify-center lg:flex'}
                 onClick={handleClick}
             >
                 <span
                     className={classNames(
-                        'bg-dark dark:bg-light block h-0.5 w-6 rounded-sm transition-transform duration-300 ease-in-out ',
+                        'block h-0.5 w-6 rounded-sm bg-dark transition-transform duration-300 ease-in-out dark:bg-light ',
                         {
-                            'rotate-45 translate-y-1': isOpen,
+                            'translate-y-1 rotate-45': isOpen,
                             '-translate-y-0.5': !isOpen,
                         },
                     )}
                 />
                 <span
                     className={classNames(
-                        'bg-dark dark:bg-light block h-0.5 w-6 rounded-sm my-0.5 transition-transform duration-300 ease-in-out',
+                        'my-0.5 block h-0.5 w-6 rounded-sm bg-dark transition-transform duration-300 ease-in-out dark:bg-light',
                         {
                             'scale-0': isOpen,
                         },
@@ -297,9 +297,9 @@ const NavBar: React.FC = ({}) => {
                 />
                 <span
                     className={classNames(
-                        'bg-dark dark:bg-light block h-0.5 w-6 rounded-sm translate-y-0.5 transition-transform duration-300 ease-in-out',
+                        'block h-0.5 w-6 translate-y-0.5 rounded-sm bg-dark transition-transform duration-300 ease-in-out dark:bg-light',
                         {
-                            '-rotate-45 -translate-y-1': isOpen,
+                            '-translate-y-1 -rotate-45': isOpen,
                             'translate-y-0.5': !isOpen,
                         },
                     )}
@@ -331,25 +331,25 @@ const NavBar: React.FC = ({}) => {
             </div>
             <div
                 className={
-                    'flex items-center justify-center flex-wrap lg:hidden'
+                    'flex flex-wrap items-center justify-center lg:hidden'
                 }
             >
                 <SocialIcon href={'https://twitter.com/'}>
-                    <TwitterIcon className={`!w-6 mr-3`} />
+                    <TwitterIcon className={`mr-3 !w-6`} />
                 </SocialIcon>
                 <SocialIcon href={'https://github.com/'}>
-                    <GithubIcon className={`!w-6 mx-3`} />
+                    <GithubIcon className={`mx-3 !w-6`} />
                 </SocialIcon>
                 <SocialIcon href={'/'}>
-                    <LinkedInIcon className={`!w-6 mx-3`} />
+                    <LinkedInIcon className={`mx-3 !w-6`} />
                 </SocialIcon>
                 <SocialIcon href={'/'}>
                     <PinterestIcon
-                        className={`!w-6 mx-3 bg-light rounded-full`}
+                        className={`mx-3 !w-6 rounded-full bg-light`}
                     />
                 </SocialIcon>
                 <SocialIcon href={'/'}>
-                    <DribbbleIcon className={`!w-6 mx-3`} />
+                    <DribbbleIcon className={`mx-3 !w-6`} />
                 </SocialIcon>
 
                 <button

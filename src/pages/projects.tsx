@@ -23,9 +23,9 @@ const Project: React.FC<{
     return (
         <article
             className={classNames(
-                'w-full flex items-center border border-solid border-dark relative bg-light dark:bg-dark dark:border-light',
+                'relative flex w-full items-center border border-solid border-dark bg-light dark:border-light dark:bg-dark',
                 {
-                    'justify-between rounded-3xl p-12 shadow-2xl rounded-br-2xl lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4':
+                    'justify-between rounded-3xl rounded-br-2xl p-12 shadow-2xl lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4':
                         featured,
                     'flex-col justify-center rounded-2xl p-6 xs:p-4': !featured,
                 },
@@ -33,9 +33,9 @@ const Project: React.FC<{
         >
             <div
                 className={classNames(
-                    'absolute top-0 -right-4 -z-10 w-[101%] h-[103%] bg-dark rounded-br-3xl dark:bg-light',
+                    'absolute -right-4 top-0 -z-10 h-[103%] w-[101%] rounded-br-3xl bg-dark dark:bg-light',
                     {
-                        'rounded-[2.5rem] xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]':
+                        'rounded-[2.5rem] sm:h-[102%] xs:-right-2 xs:w-full xs:rounded-[1.5rem]':
                             featured,
                         'rounded-[2rem] md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]':
                             !featured,
@@ -57,7 +57,7 @@ const Project: React.FC<{
                 <ScaleImage
                     src={image}
                     alt={title}
-                    className={'w-full h-auto'}
+                    className={'h-auto w-full'}
                     priority={featured}
                 />
             </Link>
@@ -67,13 +67,13 @@ const Project: React.FC<{
                     'flex flex-col items-start justify-between',
                     {
                         'w-1/2 pl-6 lg:w-full lg:pl-0 lg:pt-6': featured,
-                        'w-full mt-4': !featured,
+                        'mt-4 w-full': !featured,
                     },
                 )}
             >
                 <span
                     className={classNames(
-                        'text-primary font-medium text-xl dark:text-primaryDark',
+                        'text-xl font-medium text-primary dark:text-primaryDark',
                         {
                             'xs:text-base': featured,
                             'lg:text-lg md:text-base': !featured,
@@ -86,11 +86,11 @@ const Project: React.FC<{
                     href={link}
                     target={'_blank'}
                     rel={'noreferrer'}
-                    className={'hover:underline underline-offset-2'}
+                    className={'underline-offset-2 hover:underline'}
                 >
                     <h2
                         className={classNames(
-                            'my-2 w-full text-left font-bold dark:text-light dark:no-underline hover:dark:text-light/75 dark:transition-colors dark:duration-200 dark:ease',
+                            'dark:ease my-2 w-full text-left font-bold dark:text-light dark:no-underline dark:transition-colors dark:duration-200 hover:dark:text-light/75',
                             {
                                 'text-4xl sm:text-sm': featured,
                                 'text-3xl lg:text-2xl': !featured,
@@ -111,7 +111,7 @@ const Project: React.FC<{
                 ) : null}
                 <div
                     className={classNames('mt-2 flex items-center', {
-                        'flex-row-reverse justify-between w-full': !featured,
+                        'w-full flex-row-reverse justify-between': !featured,
                     })}
                 >
                     <Link
@@ -130,7 +130,7 @@ const Project: React.FC<{
                         target={'_blank'}
                         rel={'noreferrer'}
                         className={classNames('text-lg font-semibold', {
-                            'ml-4 rounded-lg bg-dark text-light p-2 px-6 dark:bg-light dark:text-dark sm:px-4 sm:text-base':
+                            'ml-4 rounded-lg bg-dark p-2 px-6 text-light dark:bg-light dark:text-dark sm:px-4 sm:text-base':
                                 featured,
                             'underline dark:text-light md:text-base': !featured,
                         })}
@@ -154,7 +154,7 @@ const Projects = () => {
 
             <main
                 className={
-                    'w-full mb-16 flex flex-col items-center justify-center'
+                    'mb-16 flex w-full flex-col items-center justify-center'
                 }
             >
                 <Layout className={'pt-16'}>
@@ -167,7 +167,7 @@ const Projects = () => {
 
                     <div
                         className={
-                            'grid gird-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0'
+                            'gird-cols-12 grid gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0'
                         }
                     >
                         <div className={'col-span-12'}>

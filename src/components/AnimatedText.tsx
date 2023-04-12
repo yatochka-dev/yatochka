@@ -36,10 +36,10 @@ const wordVariants = {
 const AnimatedText: React.FC<AnimatedTextProps> = ({ text, className }) => {
     return (
         <div
-            className={`w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden sm:py-0`}
+            className={`mx-auto flex w-full items-center justify-center overflow-hidden py-2 text-center sm:py-0`}
         >
             <motion.h1
-                className={`inline-block w-full text-dark dark:text-light font-bold capitalize text-8xl ${className}`}
+                className={`inline-block w-full text-8xl font-bold capitalize text-dark dark:text-light ${className}`}
                 variants={quoteVariants}
                 initial={'initial'}
                 animate={'animate'}

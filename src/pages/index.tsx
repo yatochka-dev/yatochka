@@ -16,17 +16,17 @@ export default function Home() {
 
             <main
                 className={
-                    'flex items-center text-dark w-full min-h-screen dark:text-light'
+                    'flex min-h-screen w-full items-center text-dark dark:text-light'
                 }
             >
                 <Layout className={'pt-0 md:p-16 sm:pt-8'}>
-                    <div className="flex items-center justify-between w-full lg:flex-col">
+                    <div className="flex w-full items-center justify-between lg:flex-col">
                         <div className={'w-1/2 md:w-full'}>
                             <Image
                                 src={ProfilePicture}
                                 alt={'Yatochka'}
                                 className={
-                                    'w-full h-auto lg:hidden md:inline-block md:w-full'
+                                    'h-auto w-full lg:hidden md:inline-block md:w-full'
                                 }
                                 priority={true}
                                 sizes={
@@ -37,7 +37,7 @@ export default function Home() {
                         </div>
                         <div
                             className={
-                                'w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center'
+                                'flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center'
                             }
                         >
                             <AnimatedText
@@ -45,7 +45,7 @@ export default function Home() {
                                     'Turning Vision Into Reality With Code And Design.'
                                 }
                                 className={
-                                    '!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl'
+                                    '!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl'
                                 }
                             />
                             <p
@@ -61,7 +61,7 @@ export default function Home() {
                             </p>
                             <div
                                 className={
-                                    'flex items-center self-start mt-2 lg:self-center'
+                                    'mt-2 flex items-center self-start lg:self-center'
                                 }
                             >
                                 <Link
@@ -69,16 +69,16 @@ export default function Home() {
                                     href={'/dummy.pdf'}
                                     target={'_blank'}
                                     className={
-                                        'flex items-center bg-dark text-light dark:bg-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:border-light hover:dark:text-light transition-colors ease duration-200 md:p-2 md:px-4 md:text-base'
+                                        'ease flex items-center rounded-lg border border-2 border-solid border-transparent bg-dark p-2.5 px-6 text-lg font-semibold text-light transition-colors duration-200 hover:border-dark hover:bg-light hover:text-dark dark:bg-light dark:text-dark hover:dark:border-light hover:dark:bg-dark hover:dark:text-light md:p-2 md:px-4 md:text-base'
                                     }
                                 >
-                                    Resume <LinkArrow className={'w-6 ml-1'} />
+                                    Resume <LinkArrow className={'ml-1 w-6'} />
                                 </Link>
                                 <Link
                                     href={'mailto:philipchef13@gmail.com'}
                                     target={'_blank'}
                                     className={
-                                        'ml-4 text-lg font-medium capitalize text-dark dark:text-light underline md:text-base'
+                                        'ml-4 text-lg font-medium capitalize text-dark underline dark:text-light md:text-base'
                                     }
                                 >
                                     Contact
@@ -90,13 +90,13 @@ export default function Home() {
                 <HireMe />
                 <div
                     className={
-                        'absolute right-8 bottom-8 inline-block w-24 md:hidden'
+                        'absolute bottom-8 right-8 inline-block w-24 md:hidden'
                     }
                 >
                     <Image
                         src={LightBulb}
                         alt={"Yatochka's Thinking"}
-                        className={'w-full h-auto'}
+                        className={'h-auto w-full'}
                     ></Image>
                 </div>
             </main>

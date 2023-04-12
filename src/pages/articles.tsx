@@ -61,12 +61,12 @@ const FeaturedArticle: React.FC<{
     return (
         <li
             className={
-                'relative col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl dark:bg-dark dark:border-light'
+                'relative col-span-1 w-full rounded-2xl border border-solid border-dark bg-light p-4 dark:border-light dark:bg-dark'
             }
         >
             <div
                 className={
-                    'rounded-[2rem] absolute top-0 -right-4 -z-10 w-[101%] h-[103%] bg-dark rounded-br-3xl dark:bg-light'
+                    'absolute -right-4 top-0 -z-10 h-[103%] w-[101%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light'
                 }
             />
             <Link
@@ -74,28 +74,28 @@ const FeaturedArticle: React.FC<{
                 target={'_blank'}
                 rel={'noreferrer'}
                 className={
-                    'w-full inline-block cursor-pointer overflow-hidden rounded-lg'
+                    'inline-block w-full cursor-pointer overflow-hidden rounded-lg'
                 }
             >
                 <ScaleImage
                     src={image}
                     alt={title}
-                    className={'w-full h-auto'}
+                    className={'h-auto w-full'}
                     priority
                 />
             </Link>
             <Link href={link} target={'_blank'} rel={'noreferrer'}>
                 <h2
                     className={
-                        'capitalize text-2xl font-bold my-2 mt-4 hover:underline xs:text-lg'
+                        'my-2 mt-4 text-2xl font-bold capitalize hover:underline xs:text-lg'
                     }
                 >
                     {title}
                 </h2>
             </Link>
-            <p className={'text-sm mb-2 sm:hidden'}>{summary}</p>
+            <p className={'mb-2 text-sm sm:hidden'}>{summary}</p>
             <span
-                className={'text-primary dark:text-primaryDark font-semibold'}
+                className={'font-semibold text-primary dark:text-primaryDark'}
             >
                 {time}
             </span>
@@ -114,10 +114,10 @@ const Articles = () => {
 
             <main
                 className={
-                    'w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light'
+                    'mb-16 flex w-full flex-col items-center justify-center overflow-hidden dark:text-light'
                 }
             >
-                <Layout className={'pt-16 pb-48'}>
+                <Layout className={'pb-48 pt-16'}>
                     <AnimatedText
                         text={'Words Can Change The World! '}
                         className={
@@ -126,7 +126,7 @@ const Articles = () => {
                     />
                     <ul
                         className={
-                            'grid grid-cols-2 gap-16 lg:gap-8 md:gap-y-16 md:grid-cols-1'
+                            'grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16'
                         }
                     >
                         <FeaturedArticle
@@ -156,7 +156,7 @@ const Articles = () => {
                     </ul>
                     <h2
                         className={
-                            'font-bold text-4xl w-full text-center my-16 mt-32'
+                            'my-16 mt-32 w-full text-center text-4xl font-bold'
                         }
                     >
                         All Articles
@@ -166,7 +166,7 @@ const Articles = () => {
                             <motion.li
                                 key={`${article.createdAt.toJSON()}-${index}`}
                                 className={
-                                    'relative w-full p-4 py-6 my-4 rounded-2xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 dark:border-light dark:bg-dark dark:text-light sm:flex-col'
+                                    'relative my-4 flex w-full items-center justify-between rounded-2xl border border-b-4 border-r-4 border-solid border-dark bg-light p-4 py-6 text-dark first:mt-0 dark:border-light dark:bg-dark dark:text-light sm:flex-col'
                                 }
                                 initial={{
                                     y: 200,
@@ -183,7 +183,7 @@ const Articles = () => {
                                 <MovingImage {...article} />
                                 <span
                                     className={
-                                        'text-primary dark:text-primaryDark font-semibold pl-4 sm:self-start sm:pl-0 sm:mt-4 xs:text-sm xs:mt-2 '
+                                        'pl-4 font-semibold text-primary dark:text-primaryDark sm:mt-4 sm:self-start sm:pl-0 xs:mt-2 xs:text-sm '
                                     }
                                 >
                                     {article.createdAt.toUTCString()}

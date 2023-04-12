@@ -35,14 +35,14 @@ export const MovingImage: React.FC<{
             onMouseMove={onLinkMouseMove}
             onMouseLeave={onLinkMouseLeave}
         >
-            <h2 className={'capitalize text-xl font-semibold hover:underline'}>
+            <h2 className={'text-xl font-semibold capitalize hover:underline'}>
                 {title}
             </h2>
             <MagicImage
                 src={image}
                 alt={title}
                 className={
-                    'w-96 h-auto absolute rounded-lg z-10 hidden md:!hidden'
+                    'absolute z-10 hidden h-auto w-96 rounded-lg md:!hidden'
                 }
                 style={{
                     x,

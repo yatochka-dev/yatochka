@@ -8,12 +8,12 @@ const Footer: React.FC = () => {
     return (
         <footer
             className={
-                'w-full border-t-2 border-solid border-dark font-medium text-lg dark:text-light dark:border-light sm:text-base'
+                'w-full border-t-2 border-solid border-dark text-lg font-medium dark:border-light dark:text-light sm:text-base'
             }
         >
             <Layout
                 className={
-                    'py-8 flex items-center justify-between lg:flex-col lg:py-6 lg:gap-4'
+                    'flex items-center justify-between py-8 lg:flex-col lg:gap-4 lg:py-6'
                 }
             >
                 <span>{currentYear} &copy; All Rights Reserved.</span>
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
                     Built with
                     <span
                         className={
-                            'text-primary text-2xl px-1 dark:text-primaryDark'
+                            'px-1 text-2xl text-primary dark:text-primaryDark'
                         }
                     >
                         &#9825;
@@ -42,10 +42,10 @@ const Footer: React.FC = () => {
             </Layout>
             <div
                 className={
-                    'fixed bottom-8 min-w-[10px] left-8 h-10 bg-dark dark:bg-light'
+                    'fixed bottom-8 left-8 h-10 min-w-[10px] bg-dark dark:bg-light'
                 }
             >
-                <div className={'flex text-light dark:text-dark gap-2'}>
+                <div className={'flex gap-2 text-light dark:text-dark'}>
                     <div className={'hidden xl:inline-block'}>XL</div>
                     <div className={'hidden lg:inline-block'}>LG</div>
                     <div className={'hidden md:inline-block'}>MD</div>

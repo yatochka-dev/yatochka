@@ -1,21 +1,19 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { prisma } from '@/server/db'
+import { Project } from '@prisma/client'
 
 type Data = {
-    name: string
-    examples: {
-        id: string
-        createdAt: Date
-        updatedAt: Date
-    }[]
+    projects: Project[]
 }
 
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>,
 ) {
-    const examples = await prisma.example.findMany()
+    const projects = await prisma.project.findMany()
 
-    res.status(200).json({ name: 'John Doe', examples })
+    res.status(200).json({
+        projects,
+    })
 }
