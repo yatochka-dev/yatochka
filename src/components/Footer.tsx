@@ -2,6 +2,26 @@ import React from 'react'
 import { Layout } from '@/components/Layout'
 import Link from 'next/link'
 
+function Debug() {
+    const isDev = process.env.NODE_ENV === 'development'
+    if (!isDev) return null
+    return (
+        <div
+            className={
+                'fixed bottom-8 left-8 h-10 min-w-[10px] bg-dark dark:bg-light'
+            }
+        >
+            <div className={'flex gap-2 text-light dark:text-dark'}>
+                <div className={'hidden xl:inline-block'}>XL</div>
+                <div className={'hidden lg:inline-block'}>LG</div>
+                <div className={'hidden md:inline-block'}>MD</div>
+                <div className={'hidden sm:inline-block'}>SM</div>
+                <div className={'hidden xs:inline-block'}>XS</div>
+            </div>
+        </div>
+    )
+}
+
 const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear()
 
@@ -40,19 +60,7 @@ const Footer: React.FC = () => {
                     Say Hello!
                 </Link>
             </Layout>
-            <div
-                className={
-                    'fixed bottom-8 left-8 h-10 min-w-[10px] bg-dark dark:bg-light'
-                }
-            >
-                <div className={'flex gap-2 text-light dark:text-dark'}>
-                    <div className={'hidden xl:inline-block'}>XL</div>
-                    <div className={'hidden lg:inline-block'}>LG</div>
-                    <div className={'hidden md:inline-block'}>MD</div>
-                    <div className={'hidden sm:inline-block'}>SM</div>
-                    <div className={'hidden xs:inline-block'}>XS</div>
-                </div>
-            </div>
+            <Debug />
         </footer>
     )
 }
