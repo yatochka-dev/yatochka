@@ -3,7 +3,12 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { prisma } from '@/server/db'
 
 type Data = {
-    name: string
+    name: string,
+    examples: {
+        id: string,
+        createdAt: Date,
+        updatedAt: Date,
+    }[]
 }
 
 export default async function handler(
