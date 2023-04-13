@@ -8,15 +8,24 @@
 const config = {
     reactStrictMode: true,
 
-    /**
-     * If you have the "experimental: { appDir: true }" setting enabled, then you
-     * must comment the below `i18n` config out.
-     *
-     * @see https://github.com/vercel/next.js/issues/41980
-     */
+
+    // experimental: {
+    //     forceSwcTransforms: true,
+    //
+    //     swcPlugins: [
+    //         ['next-superjson-plugin', {}]
+    //     ]
+    // },
+
     i18n: {
         locales: ['en'],
         defaultLocale: 'en',
     },
+    images: {
+        domains: [
+            'i.ibb.co',
+            'yatochka.vercel.app'
+        ]
+    }
 }
 export default config
